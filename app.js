@@ -6,7 +6,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 
 // 设置默认 mongoose 连接
-const mongoDB = 'mongodb+srv://cori:951230@cluster0-hjcim.azure.mongodb.net/test?retryWrites=true&w=majority';
+const mongoDB = process.env.MONGODB_URI || 'mongodb+srv://cori:951230@cluster0-hjcim.azure.mongodb.net/test?retryWrites=true&w=majority';
 mongoose.connect(mongoDB);
 
 
